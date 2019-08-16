@@ -1,8 +1,8 @@
 {
-  "name": "ls",
+  "name": "brain-games",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "brain-games.js",
   "bin": {
     "src/bin/brain-games.js": "./brain-games.js"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Barrierok/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Barrierok",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Barrierok/frontend-project-lvl1/issues"
