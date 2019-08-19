@@ -1,12 +1,16 @@
 {
   "name": "brain-games-by-barrier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "babel-node": "babel-node",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -20,11 +24,10 @@
   "bugs": {
     "url": "https://github.com/Barrierok/frontend-project-lvl1/issues"
   },
-  "files": [
-    "dist"
-  ],
   "homepage": "https://github.com/Barrierok/frontend-project-lvl1#readme",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "1.4.10"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

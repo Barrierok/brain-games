@@ -5,4 +5,8 @@ start:
 	npx babel-node src/bin/brain-games.js
 
 publish:
-	npm publish --dry -run
+	npx publish --dry -run
+
+build:
+	rm -rf dist
+	npm run build
