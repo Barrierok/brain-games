@@ -1,0 +1,22 @@
+{
+  "name": "brain-games-by-barrier",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barrierok/frontend-project-lvl1.git"
+  },
+  "author": "barrier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barrierok/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Barrierok/frontend-project-lvl1#readme"
+}
