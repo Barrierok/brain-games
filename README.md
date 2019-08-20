@@ -13,3 +13,9 @@ How to start the game Brain-even!
 How to start the game Brain-gcd!
 [![asciicast](https://asciinema.org/a/gihMCQ9sS1ChL2qWCyAjKbuFI.svg)](https://asciinema.org/a/gihMCQ9sS1ChL2qWCyAjKbuFI)
 
+How to start the game Brain-progression!
+[![asciicast](https://asciinema.org/a/a7cSkvzgUEj5FJQlr0rgFdwfg.svg)](https://asciinema.org/a/a7cSkvzgUEj5FJQlr0rgFdwfg)
+
+How to start the game Brain-prime!
+[![asciicast](https://asciinema.org/a/3oMwgjMEnCeDdJ6RfhauJBfgL.svg)](https://asciinema.org/a/3oMwgjMEnCeDdJ6RfhauJBfgL)
+
