@@ -1,12 +1,12 @@
 import random from '../lib';
 
 const generateProgression = (num, step) => {
-  const iter = (progression, length) => {
-    if (length > 10) {
+  const iter = (progression, counter) => {
+    if (counter > 10) {
       return progression;
     }
-    const nextNum = num + (length - 1) * step;
-    return iter([...progression, nextNum], length + 1);
+    const nextNum = num + (counter - 1) * step;
+    return iter([...progression, nextNum], counter + 1);
   };
   return iter([], 1);
 };
