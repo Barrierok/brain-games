@@ -1,11 +1,12 @@
 {
-  "name": "brain-games-by-barrier",
+  "name": "brain-games-barrier",
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
