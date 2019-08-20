@@ -1,22 +1,20 @@
 import { question } from 'readline-sync';
 
-const getUserName = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise answer "no".\n');
+export const greeting = (variation = 'default') => {
+  const variationGame = {
+    brainEven: 'Answer "yes" if number even otherwise answer "no".\n',
+    default: '',
+  };
+  console.log(`Welcome to the Brain Games!\n${variationGame[variation]}`);
+};
+
+export const getUserName = () => {
   const userName = question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   return userName;
 };
 
-const getRandom = () => {
-  const min = 1;
-  const max = 100;
-  return Math.floor(Math.random() * (min + max)) + min;
-};
-
-export default () => {
-  const userName = getUserName();
-  const expectedCorrect = 3;
-
+export const brainEven = (userName) => {
   const getCorrectAnswer = (num) => {
     if (num % 2 === 0) {
       return 'yes';
@@ -24,6 +22,12 @@ export default () => {
     return 'no';
   };
 
+  const getRandom = () => {
+    const min = 1;
+    const max = 100;
+    return Math.floor(Math.random() * (min + max)) + min;
+  };
+  const expectedCorrect = 3;
   const iter = (correctAnswers) => {
     if (correctAnswers === expectedCorrect) {
       console.log(`Congratulations, ${userName}!`);
