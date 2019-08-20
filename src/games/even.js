@@ -14,7 +14,5 @@ export const getAnswer = (question) => getParity(+question);
 export const getQuestion = () => {
   const number = random(1, 100);
   const question = `${number}`;
-
-  getAnswer(getParity(number));
   return question;
 };

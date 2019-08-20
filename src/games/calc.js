@@ -38,7 +38,5 @@ export const getQuestion = () => {
   const operand2 = random(0, 100);
   const operation = random(0, 3);
   const question = `${operand1} ${getOperation(operation)} ${operand2}`;
-
-  countAnswer(operand1, operand2, operation);
   return question;
 };
