@@ -2,7 +2,6 @@ import random from '../lib';
 
 const countDivisor = (...operands) => {
   const [a, b] = operands;
-  console.log(a, b);
   const [operand1, operand2] = [+a, +b];
 
   const iter = (divisor) => {

@@ -10,18 +10,18 @@
 How to install Brain Games!
 [![asciicast](https://asciinema.org/a/x4gT7sW7OJmcAfcEAHnJvQCXm.svg)](https://asciinema.org/a/x4gT7sW7OJmcAfcEAHnJvQCXm)
 
-How to start the game Brain-calc!
-[![asciicast](https://asciinema.org/a/OcOJbS0UaU8XGA1bT26nIxyTM.svg)](https://asciinema.org/a/OcOJbS0UaU8XGA1bT26nIxyTM)
+How to start and play the game Brain-calc!
+[![asciicast](https://asciinema.org/a/NcoU6dhPJjHdhk4PpeAkPUMMD.svg)](https://asciinema.org/a/NcoU6dhPJjHdhk4PpeAkPUMMD)
 
-How to start the game Brain-even!
-[![asciicast](https://asciinema.org/a/sHFG9Pz5UTf6ZS4Xx8DO5fF0B.svg)](https://asciinema.org/a/sHFG9Pz5UTf6ZS4Xx8DO5fF0B)
+How to start and play the game Brain-even!
+[![asciicast](https://asciinema.org/a/KhVuc9WogRYnurlFIIsQFp13h.svg)](https://asciinema.org/a/KhVuc9WogRYnurlFIIsQFp13h)
 
-How to start the game Brain-gcd!
-[![asciicast](https://asciinema.org/a/gihMCQ9sS1ChL2qWCyAjKbuFI.svg)](https://asciinema.org/a/gihMCQ9sS1ChL2qWCyAjKbuFI)
+How to start and play the game Brain-gcd!
+[![asciicast](https://asciinema.org/a/6whgQ1r2yoM56y16Hv8EWsFnk.svg)](https://asciinema.org/a/6whgQ1r2yoM56y16Hv8EWsFnk)
 
-How to start the game Brain-progression!
-[![asciicast](https://asciinema.org/a/a7cSkvzgUEj5FJQlr0rgFdwfg.svg)](https://asciinema.org/a/a7cSkvzgUEj5FJQlr0rgFdwfg)
+How to start and play the game Brain-progression!
+[![asciicast](https://asciinema.org/a/SsYJbl2xbyk3yLlyWffBfD0NT.svg)](https://asciinema.org/a/SsYJbl2xbyk3yLlyWffBfD0NT)
 
-How to start the game Brain-prime!
-[![asciicast](https://asciinema.org/a/3oMwgjMEnCeDdJ6RfhauJBfgL.svg)](https://asciinema.org/a/3oMwgjMEnCeDdJ6RfhauJBfgL)
+How to start and play the game Brain-prime!
+[![asciicast](https://asciinema.org/a/9CGKZvQwziMKRfL5psiD83sz9.svg)](https://asciinema.org/a/9CGKZvQwziMKRfL5psiD83sz9)
 

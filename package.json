@@ -1,7 +1,8 @@
 {
   "name": "brain-games-barrier",
-  "version": "1.3.1",
-  "description": "",
+  "version": "1.3.2",
+  "description": "This project contains mini-games, which make you strain your brains",
+  "keywords": ["brain-games", "game", "games", "brain"],
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -24,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/Barrierok/frontend-project-lvl1.git"
   },
-  "author": "barrier",
+  "author": "Zubtsov Ilya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Barrierok/frontend-project-lvl1/issues"
