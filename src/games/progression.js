@@ -6,8 +6,8 @@ const generateProgression = (num, step) => {
     if (counter > 10) {
       return progression;
     }
-    const nextNum = num + (counter - 1) * step;
-    return iter([...progression, nextNum], counter + 1);
+    const newMemberProgression = num + (counter - 1) * step;
+    return iter([...progression, newMemberProgression], counter + 1);
   };
   return iter([], 1);
 };
