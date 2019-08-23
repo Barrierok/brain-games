@@ -1,16 +1,17 @@
+import startGame from '..';
 import random from '../lib';
 
 const isPrime = (number) => {
   if (number < 1) {
-    return 'no';
+    return false;
   }
 
   const iter = (divisor) => {
     if (divisor === number) {
-      return 'yes';
+      return true;
     }
     if (number % divisor === 0) {
-      return 'no';
+      return false;
     }
     return iter(divisor + 1);
   };
@@ -18,12 +19,10 @@ const isPrime = (number) => {
   return iter(2);
 };
 
-export const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
-export const getQuestion = () => {
-  const number = random(1, 500);
-  const question = `${number}`;
-  return question;
-};
+const getQuestion = () => random(1, 500);
 
-export const getAnswer = (question) => isPrime(+question);
+const getAnswer = (question) => (isPrime(+question) ? 'yes' : 'no');
+
+export default () => startGame(greeting, getQuestion, getAnswer);

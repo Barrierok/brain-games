@@ -1,18 +1,17 @@
+import startGame from '..';
 import random from '../lib';
 
-const getParity = (number) => {
+const isParity = (number) => {
   if (number % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
-export const greeting = 'Answer "yes" if number even otherwise answer "no".\n';
+const greeting = 'Answer "yes" if number even otherwise answer "no".\n';
 
-export const getAnswer = (question) => getParity(+question);
+const getQuestion = () => random(1, 100);
 
-export const getQuestion = () => {
-  const number = random(1, 100);
-  const question = `${number}`;
-  return question;
-};
+const getAnswer = (question) => (isParity(+question) ? 'yes' : 'no');
+
+export default () => startGame(greeting, getQuestion, getAnswer);

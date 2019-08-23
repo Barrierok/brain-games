@@ -1,3 +1,4 @@
+import startGame from '..';
 import random from '../lib';
 
 const generateProgression = (num, step) => {
@@ -39,7 +40,10 @@ export const getQuestion = () => {
   const step = random(-10, 60);
   const index = random(0, 10);
   const progression = generateProgression(num, step);
-  return progression.map((item, i) => ((i === index) ? '..' : item)).join(' ');
+  progression[index] = '..';
+  return progression.join(' ');
 };
 
 export const getAnswer = (question) => `${countElement(question.split(' '))}`;
+
+export default () => startGame(greeting, getQuestion, getAnswer);

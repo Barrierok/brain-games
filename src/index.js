@@ -1,36 +1,31 @@
 import { question as ask } from 'readline-sync';
-import variation from './games';
 
-export default (game = null) => {
-  if (!game) {
-    console.log('Welcome, enter the name of the game in your console');
-    return;
-  }
+const expectedCorrectAnswersCounter = 3;
 
-  console.log(`Welcome to the Brain Games!\n${variation[game].greeting}`);
+export default (greeting, getQuestion, getAnswer) => {
+  console.log(`Welcome to the Brain Games!\n${greeting}`);
 
   const userName = ask('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  const expectedCorrect = 3;
-  const iter = (correctAnswers) => {
-    if (correctAnswers === expectedCorrect) {
+  const iter = (correctAnswersCounter) => {
+    if (correctAnswersCounter === expectedCorrectAnswersCounter) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
 
-    const question = variation[game].getQuestion();
+    const question = getQuestion();
     console.log(`Question: ${question}`);
 
     const answer = ask('Your answer: ');
-    const correctAnswer = variation[game].getAnswer(question);
+    const correctAnswer = getAnswer(question);
     if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;
     }
 
     console.log('Correct!');
-    iter(correctAnswers + 1);
+    iter(correctAnswersCounter + 1);
   };
 
   iter(0);

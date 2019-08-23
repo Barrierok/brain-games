@@ -2,8 +2,12 @@
   "name": "brain-games-barrier",
   "version": "1.3.3",
   "description": "This project contains mini-games, which make you strain your brains",
-  "keywords": ["brain-games", "game", "games", "brain"],
-  "main": "dist/index.js",
+  "keywords": [
+    "brain-games",
+    "game",
+    "games",
+    "brain"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",

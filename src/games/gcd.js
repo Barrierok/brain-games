@@ -1,7 +1,7 @@
+import startGame from '..';
 import random from '../lib';
 
-const countDivisor = (...operands) => {
-  const [a, b] = operands;
+const countGreatestCommonFactor = (a, b) => {
   const [operand1, operand2] = [+a, +b];
 
   const iter = (divisor) => {
@@ -14,13 +14,14 @@ const countDivisor = (...operands) => {
   return iter(Math.min(operand1, operand2));
 };
 
-export const greeting = 'Find the greatest common divisor of given numbers.\n';
+const greeting = 'Find the greatest common divisor of given numbers.\n';
 
-export const getQuestion = () => {
+const getQuestion = () => {
   const number1 = random(1, 100);
   const number2 = random(1, 500);
-  const question = `${number1} ${number2}`;
-  return question;
+  return `${number1} ${number2}`;
 };
 
-export const getAnswer = (question) => `${countDivisor(...question.split(' '))}`;
+const getAnswer = (question) => `${countGreatestCommonFactor(...question.split(' '))}`;
+
+export default () => startGame(greeting, getQuestion, getAnswer);

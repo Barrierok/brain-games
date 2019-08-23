@@ -1,22 +1,10 @@
-
+import startGame from '..';
 import random from '../lib';
 
-const getOperation = (operation) => {
-  switch (operation) {
-    case 0:
-      return '+';
-    case 1:
-      return '-';
-    case 2:
-      return '*';
-    default:
-      return 'Unknow operation';
-  }
-};
+const getOperation = (operation) => '+-*'[operation];
 
 const countAnswer = (operand1, operation, operand2) => {
-  const a = +operand1;
-  const b = +operand2;
+  const [a, b] = [+operand1, +operand2];
   switch (operation) {
     case '+':
       return a + b;
@@ -29,14 +17,16 @@ const countAnswer = (operand1, operation, operand2) => {
   }
 };
 
-export const greeting = 'What is the result of the expression?\n';
+const greeting = 'What is the result of the expression?\n';
 
-export const getAnswer = (question) => `${countAnswer(...question.split(' '))}`;
+const getAnswer = (question) => `${countAnswer(...question.split(' '))}`;
 
-export const getQuestion = () => {
+const getQuestion = () => {
+  const numberOfOperations = 3;
   const operand1 = random(0, 100);
   const operand2 = random(0, 100);
-  const operation = random(0, 3);
-  const question = `${operand1} ${getOperation(operation)} ${operand2}`;
-  return question;
+  const operation = random(0, numberOfOperations);
+  return `${operand1} ${getOperation(operation)} ${operand2}`;
 };
+
+export default () => startGame(greeting, getQuestion, getAnswer);
