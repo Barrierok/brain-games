@@ -2,7 +2,12 @@ import { question as ask } from 'readline-sync';
 
 const expectedCorrectAnswersCounter = 3;
 
-export default (greeting, getQuestion, getAnswer) => {
+export default (greeting = null, getQuestion, getAnswer) => {
+  if (greeting === null) {
+    console.log('Welcome to the Brain Games!\nEnter the name of the game in your console');
+    return;
+  }
+
   console.log(`Welcome to the Brain Games!\n${greeting}`);
 
   const userName = ask('May I have your name? ');
