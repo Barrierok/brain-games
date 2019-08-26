@@ -1,8 +1,8 @@
 import startGame from '..';
-import random from '../lib';
+import random from '../utils';
 
 const isPrime = (number) => {
-  if (number < 1) {
+  if (number <= 1) {
     return false;
   }
 
@@ -19,10 +19,18 @@ const isPrime = (number) => {
   return iter(2);
 };
 
-const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getQuestion = () => random(1, 500);
+const getAnswer = (number) => (isPrime(number) ? 'yes' : 'no');
 
-const getAnswer = (question) => (isPrime(+question) ? 'yes' : 'no');
+const getData = () => {
+  const number = random(1, 500);
 
-export default () => startGame(greeting, getQuestion, getAnswer);
+  const result = {
+    question: number,
+    correctAnswer: getAnswer(number),
+  };
+  return result;
+};
+
+export default () => startGame(greeting, getData);

@@ -1,36 +1,32 @@
 import { question as ask } from 'readline-sync';
 
-const expectedCorrectAnswersCounter = 3;
+const roundsCount = 3;
 
-export default (greeting = null, getQuestion, getAnswer) => {
-  if (greeting === null) {
-    console.log('Welcome to the Brain Games!\nEnter the name of the game in your console');
-    return;
-  }
-
+export default (greeting, getData) => {
   console.log(`Welcome to the Brain Games!\n${greeting}`);
 
-  const userName = ask('May I have your name? ');
+  const userName = ask('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  const iter = (correctAnswersCounter) => {
-    if (correctAnswersCounter === expectedCorrectAnswersCounter) {
+  const iter = (counter) => {
+    if (counter === roundsCount) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
 
-    const question = getQuestion();
+    const { question, correctAnswer } = getData();
+
     console.log(`Question: ${question}`);
 
     const answer = ask('Your answer: ');
-    const correctAnswer = getAnswer(question);
     if (answer !== correctAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`\nLet's try again, ${userName}!`);
       return;
     }
 
     console.log('Correct!');
-    iter(correctAnswersCounter + 1);
+    iter(counter + 1);
   };
 
   iter(0);

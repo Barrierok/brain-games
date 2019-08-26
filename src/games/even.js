@@ -1,17 +1,25 @@
 import startGame from '..';
-import random from '../lib';
+import random from '../utils';
 
-const isParity = (number) => {
+const isEven = (number) => {
   if (number % 2 === 0) {
     return true;
   }
   return false;
 };
 
-const greeting = 'Answer "yes" if number even otherwise answer "no".\n';
+const greeting = 'Answer "yes" if number even otherwise answer "no".';
 
-const getQuestion = () => random(1, 100);
+const getAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
-const getAnswer = (question) => (isParity(+question) ? 'yes' : 'no');
+const getData = () => {
+  const number = random(1, 100);
 
-export default () => startGame(greeting, getQuestion, getAnswer);
+  const result = {
+    question: number,
+    correctAnswer: getAnswer(number),
+  };
+  return result;
+};
+
+export default () => startGame(greeting, getData);
