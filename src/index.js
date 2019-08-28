@@ -2,8 +2,8 @@ import { question as ask } from 'readline-sync';
 
 const roundsCount = 3;
 
-export default (greeting, getData) => {
-  console.log(`Welcome to the Brain Games!\n${greeting}`);
+export default (gameDescription, getData) => {
+  console.log(`Welcome to the Brain Games!\n${gameDescription}`);
 
   const userName = ask('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);

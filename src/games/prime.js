@@ -1,13 +1,15 @@
-import startGame from '..';
+import makeGame from '..';
 import random from '../utils';
 
 const isPrime = (number) => {
+  const restriction = Math.sqrt(number);
+
   if (number <= 1) {
     return false;
   }
 
   const iter = (divisor) => {
-    if (divisor === number) {
+    if (divisor > restriction) {
       return true;
     }
     if (number % divisor === 0) {
@@ -19,18 +21,16 @@ const isPrime = (number) => {
   return iter(2);
 };
 
-const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const getAnswer = (number) => (isPrime(number) ? 'yes' : 'no');
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getData = () => {
-  const number = random(1, 500);
+  const question = random(1, 500);
 
   const result = {
-    question: number,
-    correctAnswer: getAnswer(number),
+    question,
+    correctAnswer: isPrime(question) ? 'yes' : 'no',
   };
   return result;
 };
 
-export default () => startGame(greeting, getData);
+export default () => makeGame(gameDescription, getData);

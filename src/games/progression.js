@@ -1,4 +1,4 @@
-import startGame from '..';
+import makeGame from '..';
 import random from '../utils';
 
 const generateProgression = (num, step) => {
@@ -14,9 +14,9 @@ const generateProgression = (num, step) => {
   return iter([], 1);
 };
 
-const countStep = (progression) => {
-  const iter = (progr) => {
-    const [a, b, ...rest] = progr;
+const calculateStep = (progression) => {
+  const iter = (sequence) => {
+    const [a, b, ...rest] = sequence;
     if (a !== '..' && b !== '..') {
       return b - a;
     }
@@ -26,31 +26,29 @@ const countStep = (progression) => {
   return iter(progression);
 };
 
-const countElement = (progression) => {
-  const indexElem = progression.indexOf('..');
-  const step = countStep(progression);
-  if (indexElem === 0) {
+const calculateHiddenElement = (progression) => {
+  const indexHiddenElement = progression.indexOf('..');
+  const step = calculateStep(progression);
+  if (indexHiddenElement === 0) {
     return progression[1] - step;
   }
-  return progression[0] + indexElem * step;
+  return progression[0] + indexHiddenElement * step;
 };
 
-const greeting = 'What number is missing in the progression?\n';
-
-const getAnswer = (progression) => `${countElement(progression)}`;
+const gameDescription = 'What number is missing in the progression?';
 
 const getData = () => {
   const num = random(-30, 70);
   const step = random(-10, 60);
-  const index = random(0, 10);
   const progression = generateProgression(num, step);
-  progression[index] = '..';
+  const indexHiddenElement = random(0, progression.length);
+  progression[indexHiddenElement] = '..';
 
   const result = {
     question: progression.join(' '),
-    correctAnswer: getAnswer(progression),
+    correctAnswer: `${calculateHiddenElement(progression)}`,
   };
   return result;
 };
 
-export default () => startGame(greeting, getData);
+export default () => makeGame(gameDescription, getData);
