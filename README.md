@@ -8,20 +8,20 @@
 * Brain-prime: Answer "yes" if given number is prime. Otherwise answer "no"
 
 How to install Brain Games!
-[![asciicast](https://asciinema.org/a/x4gT7sW7OJmcAfcEAHnJvQCXm.svg)](https://asciinema.org/a/x4gT7sW7OJmcAfcEAHnJvQCXm)
+[![asciicast](https://asciinema.org/a/rt51AozNGghpYULCMmucw6Swz.svg)](https://asciinema.org/a/rt51AozNGghpYULCMmucw6Swz)
 
 How to start and play the game Brain-calc!
-[![asciicast](https://asciinema.org/a/NcoU6dhPJjHdhk4PpeAkPUMMD.svg)](https://asciinema.org/a/NcoU6dhPJjHdhk4PpeAkPUMMD)
+[![asciicast](https://asciinema.org/a/V5dizmvmkJRaU0sEPt4StvK1j.svg)](https://asciinema.org/a/V5dizmvmkJRaU0sEPt4StvK1j)
 
 How to start and play the game Brain-even!
-[![asciicast](https://asciinema.org/a/KhVuc9WogRYnurlFIIsQFp13h.svg)](https://asciinema.org/a/KhVuc9WogRYnurlFIIsQFp13h)
+[![asciicast](https://asciinema.org/a/MEn8Au89q8a02eXhGfTjRYa54.svg)](https://asciinema.org/a/MEn8Au89q8a02eXhGfTjRYa54)
 
 How to start and play the game Brain-gcd!
-[![asciicast](https://asciinema.org/a/6whgQ1r2yoM56y16Hv8EWsFnk.svg)](https://asciinema.org/a/6whgQ1r2yoM56y16Hv8EWsFnk)
+[![asciicast](https://asciinema.org/a/NgSnlDGIKtoMAZwTdhnpEqqIE.svg)](https://asciinema.org/a/NgSnlDGIKtoMAZwTdhnpEqqIE)
 
 How to start and play the game Brain-progression!
-[![asciicast](https://asciinema.org/a/SsYJbl2xbyk3yLlyWffBfD0NT.svg)](https://asciinema.org/a/SsYJbl2xbyk3yLlyWffBfD0NT)
+[![asciicast](https://asciinema.org/a/fA5p78UyyCiW3Y4GuYXysljdL.svg)](https://asciinema.org/a/fA5p78UyyCiW3Y4GuYXysljdL)
 
 How to start and play the game Brain-prime!
-[![asciicast](https://asciinema.org/a/9CGKZvQwziMKRfL5psiD83sz9.svg)](https://asciinema.org/a/9CGKZvQwziMKRfL5psiD83sz9)
+[![asciicast](https://asciinema.org/a/grYF1XesEucfEpOsBP2tPGyw9.svg)](https://asciinema.org/a/grYF1XesEucfEpOsBP2tPGyw9)
 
