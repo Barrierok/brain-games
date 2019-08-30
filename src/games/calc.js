@@ -1,10 +1,10 @@
 import makeGame from '..';
-import random from '../utils';
+import { random, toString } from '../utils';
 
 const operators = '+-*';
 
-const calculateExpression = (operand1, operation, operand2) => {
-  switch (operation) {
+const calculate = (operand1, operand2, operator) => {
+  switch (operator) {
     case '+':
       return operand1 + operand2;
     case '-':
@@ -21,13 +21,13 @@ const gameDescription = 'What is the result of the expression?';
 const getData = () => {
   const operand1 = random(0, 100);
   const operand2 = random(0, 100);
-  const operation = operators[random(0, operators.length)];
+  const operator = operators[random(0, operators.length)];
 
-  const result = {
-    question: `${operand1} ${operation} ${operand2}`,
-    correctAnswer: `${calculateExpression(operand1, operation, operand2)}`,
+  const roundData = {
+    question: `${operand1} ${operator} ${operand2}`,
+    correctAnswer: toString(calculate(operand1, operand2, operator)),
   };
-  return result;
+  return roundData;
 };
 
 export default () => makeGame(gameDescription, getData);

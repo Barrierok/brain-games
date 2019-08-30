@@ -1,5 +1,5 @@
 import makeGame from '..';
-import random from '../utils';
+import { random } from '../utils';
 
 const isPrime = (number) => {
   const restriction = Math.sqrt(number);
@@ -26,11 +26,11 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const getData = () => {
   const question = random(1, 500);
 
-  const result = {
+  const roundData = {
     question,
     correctAnswer: isPrime(question) ? 'yes' : 'no',
   };
-  return result;
+  return roundData;
 };
 
 export default () => makeGame(gameDescription, getData);

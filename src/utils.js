@@ -1,1 +1,2 @@
-export default (min, max) => Math.floor(Math.random() * (min + max)) + min;
+export const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const toString = (data) => `${data}`;
