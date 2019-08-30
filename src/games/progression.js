@@ -21,7 +21,7 @@ const getData = () => {
   const init = random(-30, 70);
   const step = random(-10, 60);
   const progression = generateProgression(init, step, progressionLength);
-  const hiddenElementIndex = random(0, progression.length - 1);
+  const hiddenElementIndex = random(0, progressionLength - 1);
   progression[hiddenElementIndex] = '..';
 
   const roundData = {

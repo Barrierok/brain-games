@@ -21,7 +21,7 @@ const gameDescription = 'What is the result of the expression?';
 const getData = () => {
   const operand1 = random(0, 100);
   const operand2 = random(0, 100);
-  const operator = operators[random(0, operators.length)];
+  const operator = operators[random(0, operators.length - 1)];
 
   const roundData = {
     question: `${operand1} ${operator} ${operand2}`,
