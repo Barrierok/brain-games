@@ -22,11 +22,13 @@ const getData = () => {
   const step = random(-10, 60);
   const progression = generateProgression(init, step, progressionLength);
   const hiddenElementIndex = random(0, progressionLength - 1);
+  const hiddenElement = progression[hiddenElementIndex];
+
   progression[hiddenElementIndex] = '..';
 
   const roundData = {
     question: progression.join(' '),
-    correctAnswer: toString(init + step * hiddenElementIndex),
+    correctAnswer: toString(hiddenElement),
   };
   return roundData;
 };
