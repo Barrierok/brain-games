@@ -1,15 +1,15 @@
 import makeGame from '..';
-import { random, toString } from '../utils';
+import random from '../utils';
 
 const progressionLength = 10;
 
-const generateProgression = (init, step, expectedProgressionLength) => {
+const generateProgression = (init, step, length) => {
   const iter = (progression, counter) => {
-    if (counter > expectedProgressionLength) {
+    if (counter > length) {
       return progression;
     }
-    const newMemberProgression = init + (counter - 1) * step;
-    return iter([...progression, newMemberProgression], counter + 1);
+    const newMember = init + (counter - 1) * step;
+    return iter([...progression, newMember], counter + 1);
   };
 
   return iter([], 1);
@@ -22,13 +22,13 @@ const getData = () => {
   const step = random(-10, 60);
   const progression = generateProgression(init, step, progressionLength);
   const hiddenElementIndex = random(0, progressionLength - 1);
-  const hiddenElement = progression[hiddenElementIndex];
+  const correctAnswer = progression[hiddenElementIndex];
 
   progression[hiddenElementIndex] = '..';
 
   const roundData = {
     question: progression.join(' '),
-    correctAnswer: toString(hiddenElement),
+    correctAnswer: correctAnswer.toString(),
   };
   return roundData;
 };

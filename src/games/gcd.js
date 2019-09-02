@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { random, toString } from '../utils';
+import random from '../utils';
 
 const calculateGreatestCommonDivisor = (operand1, operand2) => {
   const iter = (divisor) => {
@@ -20,7 +20,7 @@ const getData = () => {
 
   const roundData = {
     question: `${operand1} ${operand2}`,
-    correctAnswer: toString(calculateGreatestCommonDivisor(operand1, operand2)),
+    correctAnswer: calculateGreatestCommonDivisor(operand1, operand2).toString(),
   };
   return roundData;
 };

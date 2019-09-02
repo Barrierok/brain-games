@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { random } from '../utils';
+import random from '../utils';
 
 const isPrime = (number) => {
   const restriction = Math.sqrt(number);

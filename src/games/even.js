@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { random } from '../utils';
+import random from '../utils';
 
 const isEven = (number) => number % 2 === 0;
 

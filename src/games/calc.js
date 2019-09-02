@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { random, toString } from '../utils';
+import random from '../utils';
 
 const operators = '+-*';
 
@@ -25,7 +25,7 @@ const getData = () => {
 
   const roundData = {
     question: `${operand1} ${operator} ${operand2}`,
-    correctAnswer: toString(calculate(operand1, operand2, operator)),
+    correctAnswer: calculate(operand1, operand2, operator).toString(),
   };
   return roundData;
 };
