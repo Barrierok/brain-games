@@ -1,6 +1,33 @@
 # frontend-project-lvl1
 [![Maintainability](https://api.codeclimate.com/v1/badges/724feb1a895996add9d4/maintainability)](https://codeclimate.com/github/Barrierok/frontend-project-lvl1/maintainability) [![Build Status](https://travis-ci.org/Barrierok/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Barrierok/frontend-project-lvl1)
 
+Description
+
+As part of the project, you need to implement a set of mini-games that run from the console. Let's call them mind Games.
+
+An example of the game:
+```
+$ brain-progression
+
+Welcome to the Brain Game!
+What number is missing in this progression?
+
+May I have your name? Roman
+Hello, Roman!
+
+Question: 14 .. 18 20 22 24 26 28
+Your answer: 16
+Correct!
+Question: 5 6 7 8 9 .. 11 12
+Your answer: 10
+Correct!
+Question: 12 15 18 21 .. 27 30 33
+Your answer: 24
+Correct!
+Congratulations, Roman!
+```
+
+
 * Brain-calc: What is the result of the expression?
 * Brain-even: Answer "yes" if number even otherwise answer "no"
 * Brain-gcd: Find the greatest common divisor of given numbers.
